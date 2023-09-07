@@ -1,7 +1,9 @@
 provider "aws" {
   region = "eu-west-1"
+  shared_config_files      = ["/Users/guillemcasanova/.aws/conf"]
+  shared_credentials_files = ["/Users/guillemcasanova/.aws/creds"]
+  profile                  = "personal"
 }
-
 variable "ingress_rules" {
   type = list(number)
   default = [22, 80, 443]
